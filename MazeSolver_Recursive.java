@@ -1,23 +1,10 @@
-/*---------------------------------------------------------------------------
-ANSWER THE QUESTIONS FROM THE DOCUMENT HERE
-
-(1) Which graph representation did you choose, and why?
- I chose to use an adjacency matrix because we are not adding or removing vertices
- from the maze and so adding/removing/checking for edges will take O(1).
-
-(2) Which search algorithm did you choose, and why?
- I chose to use the Depth First Search algorithm because we are solving a maze and
- it makes the most sense to use the algorithm that goes all the way to each path until
- the correct path is found.
-
----------------------------------------------------------------------------*/
 
 import java.io.*;
 import java.lang.Math;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-public class MazeSolver {
+public class MazeSolver_Recursive {
 	ArrayList <Node> solution;
 	int solIndex = 0;
 
@@ -73,7 +60,7 @@ public class MazeSolver {
     }
     	
     }
-    // prints out the maze in the format used for HW8
+    // prints out the maze in the format used for MazeGenerator
     // includes the final path from entrance to exit, if one has been recorded,
     // and which cells have been visited, if this has been recorded
     public void printMaze(Node[] mazeCells, String mazeData, int mazeSize) {
@@ -108,8 +95,7 @@ public class MazeSolver {
 	
     }
 
-    // reads in a maze from an appropriately formatted file (this matches the
-    // format of the mazes you generated in HW8)
+    // reads in a maze from an appropriately formatted file
     // returns an array of Strings, where position 0 stores the size of the maze
     // grid (i.e., the length/width of the grid) and position 1 stores minimal 
     // information about which walls exist
